@@ -2,10 +2,11 @@
 #include <time.h>
 /* more headers goes there */
 #include <stdio.h>
+/* betty style doc for function main goes there */
 /**
- * main - A program that shows if a number is negative positive or zero
- * Return: 0 if succesful
- * /
+ * main - A program to display if a program is negative positive or zero
+ * Return: 0 if sucess
+ */
 int main(void)
 {
 	int n;
@@ -17,7 +18,7 @@ int main(void)
 		printf("%d is positive\n", n);
 	else if (n == 0)
 		printf("%d is zero\n", n);
-	else
-		printf("%d is negative\n", n);
+	else if (n < 0)
+		printf("%d is negative", n);
 	return (0);
 }
