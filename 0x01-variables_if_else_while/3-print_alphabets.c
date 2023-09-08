@@ -8,10 +8,10 @@ int main(void)
 	char i;
 
 	for (i = 'a'; i <= 'z'; i++)
-		printf("%c", i);
+		putchar(i);
 	for (i = 'A'; i <= 'Z'; i++)
-		printf("%c", i);
-	printf("\n");
+		printf(i);
+	putchar("\n");
 	return (0);
 }
 
