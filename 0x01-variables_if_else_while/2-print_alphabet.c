@@ -8,7 +8,8 @@ int main(void)
 	char i;
 
 	for (i = 'a'; i <= 'z'; i++)
-		printf("%c \n", i);
+		printf("%c ", i);
+	printf("\n");
 	return (0);
 }
 
