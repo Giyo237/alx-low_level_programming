@@ -12,7 +12,6 @@ int main(void)
 	int a;
 	int b;
 
-	do {
 	for (i = 0; i <= 99; i++)
 	{
 		x = i / 10;
@@ -36,6 +35,5 @@ int main(void)
 			}
 	}
 	}
-	} while (i == j);
 	return (0);
 }
