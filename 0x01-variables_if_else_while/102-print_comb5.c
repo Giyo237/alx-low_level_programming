@@ -24,12 +24,15 @@ int main(void)
 		}
 			if (x < a || (x == a && y < b))
 			{
-				putchar(x);
-				putchar(y);
-				putchar(',');
+				putchar(x + '0');
+				putchar(y + '0');
 				putchar(' ');
-				putchar(a);
-				putchar(b);
+				putchar(a + '0');
+				putchar(b + '0');
+				if (x != '9' && y != 8)
+				{
+					putchar(',');
+					putchar(' ');
 			}
 	}
 	} while (i == j);
