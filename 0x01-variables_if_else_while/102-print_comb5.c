@@ -7,21 +7,31 @@ int main(void)
 {
 	int i;
 	int j;
+	int x;
+	int y;
+	int a;
+	int b;
 
 	do {
 	for (i = 0; i <= 99; i++)
+	{
+		x = i / 10;
+		y = i % 10;
 		for (j = i; j <= 99; j++)
 		{
-			putchar((i / 10) + '0');
-			putchar((i % 10) + '0');
-			putchar((j / 10) + '0');
-			putchar((j % 10) + '0');
+			a = j / 10;
+			b = j % 10;
 		}
-			if (i != 99 || j != 99)
+			if (x < a || (x == a && y < b))
 			{
+				putchar(x);
+				putchar(y);
 				putchar(',');
 				putchar(' ');
+				putchar(a);
+				putchar(b);
 			}
+	}
 	} while (i == j);
 	return (0);
 }
