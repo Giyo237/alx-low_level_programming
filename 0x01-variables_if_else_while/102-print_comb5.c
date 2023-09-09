@@ -8,6 +8,7 @@ int main(void)
 	int i;
 	int j;
 
+	do {
 	for (i = 0; i <= 99; i++)
 		for (j = i; j <= 99; j++)
 		{
@@ -21,5 +22,6 @@ int main(void)
 				putchar(' ');
 			}
 		}
+	} while (i == j)
 	return (0);
 }
