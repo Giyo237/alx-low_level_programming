@@ -7,28 +7,28 @@ int main(void)
 {
 	int i;
 	int j;
-	int x;
-	int y;
 	int a;
 	int b;
+	int c;
+	int d;
 
 	for (i = '0'; i <= 99; i++)
 	{
-		x = i / 10;
-		y = i % 10;
+		a = i / 10;
+		b = i % 10;
 		for (j = '0'; j <= 99; j++)
 		{
-			a = j / 10;
-			b = j % 10;
+			c = j / 10;
+			d = j % 10;
 		}
-			if (x < a || (x == a && y < b))
+			if (a < c || (a == c && b < d))
 			{
-				putchar(x + '0');
-				putchar(y + '0');
-				putchar(' ');
 				putchar(a + '0');
 				putchar(b + '0');
-				if (x != '9' && y != 8)
+				putchar(' ');
+				putchar(c + '0');
+				putchar(d + '0');
+				if (a != '9' && b != 8)
 				{
 					putchar(',');
 					putchar(' ');
