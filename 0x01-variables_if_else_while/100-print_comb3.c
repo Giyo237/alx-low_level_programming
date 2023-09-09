@@ -20,6 +20,10 @@ int main(void)
 		putchar(',');
 		putchar(' ');
 	}
+	if (j == 9)
+	{
+		break;
+	}
 	}
 	}
 	} while (i != j);
