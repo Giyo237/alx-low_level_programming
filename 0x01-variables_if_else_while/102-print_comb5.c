@@ -12,11 +12,11 @@ int main(void)
 	int a;
 	int b;
 
-	for (i = 0; i <= 99; i++)
+	for (i = '0'; i <= 99; i++)
 	{
 		x = i / 10;
 		y = i % 10;
-		for (j = i; j <= 99; j++)
+		for (j = '0'; j <= 99; j++)
 		{
 			a = j / 10;
 			b = j % 10;
