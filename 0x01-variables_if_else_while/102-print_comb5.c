@@ -22,6 +22,6 @@ int main(void)
 				putchar(' ');
 			}
 		}
-	} while (i == j)
+	} while (i == j);
 	return (0);
 }
