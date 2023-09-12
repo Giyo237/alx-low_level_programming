@@ -1,21 +1,17 @@
-#include <stdio.h>
+#include "main.h"
+
 /**
- * main - a program that prints numbers
- * Return: 0
+ * print_alphabet - make the alphabet
+ * Return:0
  */
+
 void print_alphabet(void)
 {
-	char a;
+	char c;
 
-	for (a = 'a'; a < 'z'; a++)
+	for (c = 'a'; c <= 'z'; c++)
 	{
-		_putchar(a);
+		_putchar(c);
 	}
 	_putchar('\n');
-}
-
-int main(void)
-{
-	print_alphabet();
-	return (0);
 }
