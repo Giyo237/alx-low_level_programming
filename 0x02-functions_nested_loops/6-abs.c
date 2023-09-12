@@ -1,11 +1,12 @@
 #include "main.h"
 /**
- * print_last_digit - printss the abs value of an interger/float
+ * _abs - printss the abs value of an interger/float
  * Return: 0
+ *@a: checker value
  */
 int _abs(int a)
 {
-	 if (a < 0)
+	if (a < 0)
 	{
 	return (-a);
 	}
