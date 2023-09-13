@@ -1,4 +1,4 @@
-#iclude <stdio.h>
+#include <stdio.h>
 
 /**
  * main - prints sum of all multi of 3 and 5 upto 1024
