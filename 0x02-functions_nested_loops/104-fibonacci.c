@@ -7,7 +7,7 @@
 
 int numlenght(int n)
 {
-       int l = 0;
+	int l = 0;
 
 if (!n)
 {
@@ -43,7 +43,7 @@ int main(void)
 		printf("%lu", f1);
 
 		tmp = (f1 + f2) % mx;
-		tm = h1 + h2 + (f1 +f2) / mx;
+		tm = h1 + h2 + (f1 + f2) / mx;
 		f1 = f2;
 		h1 = h2;
 		f2 = tmp;
@@ -51,7 +51,7 @@ int main(void)
 
 		if (i != 98)
 			printf(", ");
-		else 
+		else
 			printf("\n");
 		i++;
 	}
