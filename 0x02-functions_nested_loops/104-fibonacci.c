@@ -28,7 +28,7 @@ int main(void)
 	}
 	if (i < MAX - 1)
 	{
-	printf("llu ", s);
+	printf("%lu ", s);
 	}
 	else 
 	{
@@ -44,7 +44,7 @@ int main(void)
 	h1 += 1;
 	h2 %= 10000000000;
 	}
-	printf("%llu%010llu", h1, h2);
+	printf("%lu%010lu", h1, h2);
 	}
 	}
 	printf("\n");
