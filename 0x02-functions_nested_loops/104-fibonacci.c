@@ -5,11 +5,11 @@
  * Return: Always 0.
  */
 
-#define MAX 98
+#define MAX 100
 
 int main(void)
 {
-	unsigned long f1 = 0, f2 = 1, s;
+	unsigned long f1 = 1, f2 = 1, s;
 	unsigned long f1h1, f1h2, f2h1, f2h2;
 	unsigned long  h1, h2;
 	int i;
@@ -18,7 +18,7 @@ int main(void)
 	{
 	if (i < 2)
 	{
-	s = i;
+	s = 1;
 	}
 	else
 	{
@@ -44,7 +44,8 @@ int main(void)
 	h1 += 1;
 	h2 %= 10000000000;
 	}
-	printf("%lu%lu", h1, h2);
+	printf("%lu", h1);
+	printf("%010lu", h2);
 	}
 	}
 	printf("\n");
