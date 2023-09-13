@@ -5,11 +5,11 @@
  * Return: Always 0.
  */
 
-#define MAX 100
+#define MAX 98
 
 int main(void)
 {
-	unsigned long f1 = 1, f2 = 1, s;
+	unsigned long f1 = 0, f2 = 1, s;
 	unsigned long f1h1, f1h2, f2h1, f2h2;
 	unsigned long  h1, h2;
 	int i;
