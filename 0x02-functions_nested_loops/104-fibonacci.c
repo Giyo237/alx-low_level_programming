@@ -5,18 +5,18 @@
  * @n: the value it starts printing from
  * Return: Always 0.
  */
-void fibonacci(unsigned int c)
+void fibonacci(unsigned long long int c)
 {
-unsigned int  a = 0;
-unsigned int b = 1;
+unsigned long long int  a = 1;
+unsigned int long long b = 2;
 int i;
 
-printf("1, 2");
+printf("%lld, %lld", a , b);
 
-for (i = 1; i <= 98; i++)
+for (i = 1; i <= 94; i++)
 {
 c = b + a;
-printf(", %u", c);
+printf(", %llu", c);
 a = b;
 b = c;
 }
