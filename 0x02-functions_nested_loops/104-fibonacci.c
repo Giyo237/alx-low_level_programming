@@ -21,6 +21,7 @@ printf(", %u", next);
 previous = current;
 current = next;
 }
+}
 int main(void)
 {
 	int number = 98;
