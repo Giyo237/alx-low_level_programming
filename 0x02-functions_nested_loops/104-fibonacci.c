@@ -5,11 +5,10 @@
  * @n: the value it starts printing from
  * Return: Always 0.
  */
-void fibonacci(int n)
+void fibonacci(unsigned int c)
 {
 unsigned int  a = 0;
 unsigned int b = 1;
-unsigned int c;
 int i;
 
 printf("1, 2");
