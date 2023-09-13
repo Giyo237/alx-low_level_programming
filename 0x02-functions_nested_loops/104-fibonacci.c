@@ -12,7 +12,7 @@ int main(void)
 	unsigned long  h1, h2;
 	int i;
 
-	for (i = 0; i < 96; i++)
+	for (i = 0; i < 92; i++)
 	{
 	s = f1 + f2;
 	printf("%lu, ", s);
