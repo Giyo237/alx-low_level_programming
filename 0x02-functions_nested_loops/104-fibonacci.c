@@ -1,10 +1,11 @@
 #include <stdio.h>
 /**
  * main - Entry point of the program.
- *
+ * fibonacciSequence - where the computation takess place
+ * @n: the value it starts printing from
  * Return: Always 0.
  */
-int main(void)
+void fibonacciSequence(int n)
 {
 	int a = 0, b = 1, c;
 
@@ -23,7 +24,5 @@ int main(void)
 	int number = 10000;
 
 	fibonacciSequence(number);
-	return (0);
-}
 	return (0);
 }
