@@ -11,7 +11,7 @@ int main(void)
 	int i;
 
 	printf("1, 2, ");
-	for(i = 3; i <= 98; i++)
+	for(i = 3; i < 99; i++)
 	{
 	n3 = n1 + n2;
 	printf("%d, ", n3);
