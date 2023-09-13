@@ -16,16 +16,9 @@ int main(void)
 
 	for (i = 0; i < MAX; i++)
 	{
-	if (i < 2)
-	{
-	s = i;
-	}
-	else
-	{
 	s = f1 + f2;
 	f1 = f2;
 	f2 = s;
-	}
 	if (i < MAX - 1)
 	{
 	printf("%lu, ", s);
