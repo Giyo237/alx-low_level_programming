@@ -5,12 +5,12 @@
  * @n: the value it starts printing from
  * Return: Always 0.
  */
-void fibonacci(int )
+void fibonacci(int i)
 {
 unsigned long int  a = 1;
 unsigned long  int b = 2;
 unsigned long int c;
-int i;
+
 
 printf("%ld, %ld", a , b);
 
