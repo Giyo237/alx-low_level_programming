@@ -14,7 +14,7 @@ int i;
 
 printf("1, 2");
 
-for (i = 1; i <= n; i++)
+for (i = 1; i <= 98; i++)
 {
 c = b + a;
 printf(", %u", c);
