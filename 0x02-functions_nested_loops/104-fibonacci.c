@@ -1,24 +1,59 @@
 #include <stdio.h>
 /**
- * main - Entry point of the program.
- * fibonacci - where the computation takess place
+ * numlenght - Entry point of the program.
+ * @n: operant
  * Return: Always 0.
  */
 
+int numlenght(int n)
+{
+       int l = 0;
+
+if (!n)
+{
+return (1);
+}
+
+while (n)
+{
+	n = n /10;
+	l += 1;
+}
+return (l);
+}
+/**
+ * main - prints the firt 98 fib seq
+ * Return:0
+ */
 int main(void)
 {
-	int n1 = 1, n2 = 2, n3;
-	int i;
+	unsigned long f1 = 1, f2 = 2, tmp, mx = 10000000000, h1 = 0, h2 = 0, tm = 0;
+	short int i = 1, a;
 
-	printf("1, 2, ");
-	for(i = 3; i < 99; i++)
+	while (i <= 98)
 	{
-	n3 = n1 + n2;
-	printf("%d, ", n3);
-	n1 = n2;
-	n2 = n3;
-	}
+		if (h1 > 0)
+		printf("%lu", h1);
+		a = numlenght(mx) - 1 - numlenght(f1);
+		while (h1 > 0 && a > 0)
+		{
+		printf("%i", 0);
+		a--;
+		}
+		printf("%lu", f1);
 
-	printf("\n");
+		tmp = (f1 + f2) % mx;
+		tm = h1 + h2 + (f1 +f2) / mx;
+		f1 = f2;
+		h1 = h2;
+		f2 = tmp;
+		h2 = tm;
+
+		if (i != 98)
+			printf(", ");
+		else 
+			printf("\n");
+		i++;
+	}
 	return (0);
 }
