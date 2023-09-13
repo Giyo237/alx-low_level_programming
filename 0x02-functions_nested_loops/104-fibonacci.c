@@ -14,12 +14,12 @@ int main(void)
 	unsigned long  h1, h2;
 	int i;
 
-	for (i = 0; i < MAX; i++)
+	for (i = 0; i <= MAX; i++)
 	{
 	s = f1 + f2;
 	f1 = f2;
 	f2 = s;
-	if (i < MAX - 1)
+	if (i <= MAX - 1)
 	{
 	printf("%lu, ", s);
 	}
