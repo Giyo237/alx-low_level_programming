@@ -5,7 +5,7 @@
  * @n: the value it starts printing from
  * Return: Always 0.
  */
-void fibonacci(void)
+void fibonacci(int )
 {
 unsigned long int  a = 1;
 unsigned long  int b = 2;
