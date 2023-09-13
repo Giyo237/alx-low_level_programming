@@ -12,12 +12,12 @@ unsigned long  int b = 2;
 unsigned long int c;
 int i;
 
-printf("%lld, %lld", a , b);
+printf("%ld, %ld", a , b);
 
 for (i = 1; i <= 94; i++)
 {
 c = b + a;
-printf(", %llu", c);
+printf(", %ld", c);
 a = b;
 b = c;
 }
