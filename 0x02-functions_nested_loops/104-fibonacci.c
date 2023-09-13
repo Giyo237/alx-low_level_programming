@@ -1,26 +1,4 @@
 #include <stdio.h>
-
-/**
- * print_fibonacci - Prints the first 98 Fibonacci numbers.
- */
-void print_fibonacci(void)
-{
-	int i;
-	unsigned long prev = 1, curr = 2, next;
-
-	printf("%lu, %lu", prev, curr);
-
-	for (i = 3; i <= 98; i++)
-	{
-		next = prev + curr;
-		printf(", %lu", next);
-		prev = curr;
-		curr = next;
-	}
-
-	printf("\n");
-}
-
 /**
  * main - Entry point of the program.
  *
@@ -28,6 +6,24 @@ void print_fibonacci(void)
  */
 int main(void)
 {
-	print_fibonacci();
+	int a = 0, b = 1, c;
+
+printf("%d, %d", a, b);
+while (b <= n)
+{
+c = a + b;
+printf(", %d", c);
+a = b;
+b = c;
+}
+printf("\n");
+}
+int main(void)
+{
+	int number = 10000;
+
+	fibonacciSequence(number);
+	return (0);
+}
 	return (0);
 }
