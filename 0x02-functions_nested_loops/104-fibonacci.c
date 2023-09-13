@@ -20,7 +20,7 @@ int main(void)
 	f2 = s;
 	}
 	f1h1 = f1 / 10000000000;
-	f1h2 = f2 / 10000000000;
+	f2h1 = f2 / 10000000000;
 	f1h2 = f1 % 10000000000;
 	f2h2 = f1 % 10000000000;
 	for (i = 93; i < 99; i++)
@@ -35,7 +35,7 @@ int main(void)
 	printf("%lu%lu", h1, h2);
 	if (i != 98)
 	printf(",");
-	f1h1 = f2h2;
+	f1h1 = f2h1;
 	f1h2 = f2h2;
 	f2h1 = h1;
 	f2h2 = h2;
