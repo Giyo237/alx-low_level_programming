@@ -7,19 +7,19 @@
  */
 void fibonacci(int n)
 {
-unsigned int previous = 1;
-unsigned int current = 2;
-unsigned int next;
+unsigned int  a = 0;
+unsigned int b = 1;
+unsigned int c;
 int i;
 
 printf("1, 2");
 
-for (i = 3; i <= n; i++)
+for (i = 1; i <= n; i++)
 {
-next = previous + current;
-printf(", %u", next);
-previous = current;
-current = next;
+c = b + a;
+printf(", %u", c);
+a = b;
+b = c;
 }
 }
 int main(void)
