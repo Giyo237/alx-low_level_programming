@@ -18,7 +18,7 @@ int main(void)
 	{
 	if (i < 2)
 	{
-	s = 1;
+	s = i;
 	}
 	else
 	{
@@ -45,7 +45,7 @@ int main(void)
 	h2 %= 10000000000;
 	}
 	printf("%lu", h1);
-	printf("%010lu", h2);
+	printf("%lu", h2);
 	}
 	}
 	printf("\n");
