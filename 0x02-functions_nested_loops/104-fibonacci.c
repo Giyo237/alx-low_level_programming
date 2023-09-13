@@ -21,7 +21,7 @@ printf("\n");
 }
 int main(void)
 {
-	int number = 10000;
+	int number = 98;
 
 	fibonacciSequence(number);
 	return (0);
