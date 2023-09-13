@@ -1,28 +1,30 @@
 #include <stdio.h>
 /**
  * main - Entry point of the program.
- * fibonacciSequence - where the computation takess place
+ * fibonacci - where the computation takess place
  * @n: the value it starts printing from
  * Return: Always 0.
  */
-void fibonacciSequence(int n)
+void fibonacci(int n)
 {
-	int a = 0, b = 1, c;
+unsigned int previous = 1;
+unsigned int current = 2;
+unsigned int next;
+int i;
 
-printf("%d, %d", a, b);
-while (b <= n)
+printf("1, 2");
+
+for (i = 3; i <= n; i++)
 {
-c = a + b;
-printf(", %d", c);
-a = b;
-b = c;
-}
-printf("\n");
+next = previous + current;
+printf(", %u", next);
+previous = current;
+current = next;
 }
 int main(void)
 {
 	int number = 98;
 
-	fibonacciSequence(number);
+	fibonacci(number);
 	return (0);
 }
