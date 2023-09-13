@@ -16,7 +16,7 @@ return (1);
 
 while (n)
 {
-	n = n /10;
+	n = n / 10;
 	l += 1;
 }
 return (l);
@@ -27,7 +27,7 @@ return (l);
  */
 int main(void)
 {
-	unsigned long f1 = 1, f2 = 2, tmp, mx = 10000000000, h1 = 0, h2 = 0, tm = 0;
+	unsigned long f1 = 1, f2 = 2, tmp, mx = 100000000, h1 = 0, h2 = 0, tm = 0;
 	short int i = 1, a;
 
 	while (i <= 98)
