@@ -11,30 +11,22 @@
 int main(void)
 
 {
+	long p = 612852475143, div;
 
-	long int n;
-
-	long int max;
-
-	long int i;
-
-	n = 612852475143;
-	max = -1;
-	while (n % 2 == 0)
+	while (div < (p / 2))
 	{
-	max = 2;
-	n /= 2;
-	}
-	for (i = 3; i <= sqrt(n); i = i + 2)
-	{
-		while (n % i == 0)
-	{
-	max = i;
-	n = n / i;
+		if ((p % 2) == 0)
+		{
+			p /= 2;
+			continue;
+		}
+		for (div = 3; div < (p / 2); div += 2)
+		{
+			if ((p % div) == 0)
+				p /= div;
 		}
 	}
-	if (n > 2)
-	max = n;
-	printf("%ld\n", max);
+	printf("%ld\n", p);
+
 	return (0);
 }
