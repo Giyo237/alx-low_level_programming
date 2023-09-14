@@ -1,7 +1,7 @@
 #include "main.h"
 /**
  * print_line - a function that prints a str8 line in the terminal
- * @:number of times it will be on the terminal
+ * @n:number of times it will be on the terminal
  */
 void print_line(int n)
 {
