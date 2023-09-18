@@ -9,10 +9,16 @@ int _strlen(char *s)
 	int l = 0;
 
 	do {
+		if (*s == '\0')
+		{
+			if (l == 0)
+			{
+				return (l);
+			}
+			break;
+		}
 		l++;
 		s++;
 	} while (*s != '\0');
-	if (*s == '\0')
-		_putchar(*s);
 	return (l);
 }
