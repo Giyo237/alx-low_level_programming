@@ -12,5 +12,9 @@ int _strlen(char *s)
 		l++;
 		s++;
 	} while (*s != '\0');
+	if (l == 1)
+	{
+		_putchar(l);
+	}
 	return (l);
 }
