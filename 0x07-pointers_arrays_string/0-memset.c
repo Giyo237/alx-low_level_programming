@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _memsett - fill block of mem with specific val
+ * _memset - fill block of mem with specific val
  * @s: starting point or address
  * @b: the operant
  * @n: number of  bytes
@@ -9,7 +9,7 @@
  * Return: n bytes and the changed arr
  */
 
-char* _memset(char *s, char b, unsigned int n)
+char *_memset(char *s, char b, unsigned int n)
 
 {
 
