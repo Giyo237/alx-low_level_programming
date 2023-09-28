@@ -1,6 +1,8 @@
 #ifndef RECURSION_C
 #define RECURSION_C
 
+int wildcmp(char *s1, char *s2);
+int is_palindrome(char *s);
 int prime(int n, int p);
 int _sqrt(int r, int n);
 void _puts_recursion(char *s);
