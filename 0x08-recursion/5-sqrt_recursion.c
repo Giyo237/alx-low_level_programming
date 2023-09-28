@@ -25,5 +25,5 @@ int _sqrt(int n, int r)
 		return (-1);
 	if (r * r == n)
 		return (r);
-	return (_sqrt(n, r+1));
+	return (_sqrt(n, r + 1));
 }
