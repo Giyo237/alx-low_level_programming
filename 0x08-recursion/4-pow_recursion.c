@@ -3,6 +3,8 @@
 /**
 * _pow_recursion - function that calc the pow of x^y
 * Return: answer
+*@x: base
+*@y: exponent
 */
 int _pow_recursion(int x, int y)
 {
@@ -10,7 +12,7 @@ int _pow_recursion(int x, int y)
 	{
 		return (-1);
 	}
-	else if(y == 0)
+	else if (y == 0)
 	{
 		return (1);
 	}
