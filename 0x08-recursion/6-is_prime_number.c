@@ -8,12 +8,12 @@ int is_prime_number(int n)
 {
 	if (n <= 1)
 		return (0);
-	return (prime(n, n-1));
+	return (prime(n, n - 1));
 }
 /**
 * prime - function that returns prime
 * @n: operant
-* @p: iterator 
+* @p: iterator
 *Return: prime
 */
 int prime(int n, int p)
@@ -22,6 +22,6 @@ int prime(int n, int p)
 		return (1);
 	if (n % p == 0 && p > 0)
 		return (0);
-	return (prime(n, p-1));
+	return (prime(n, p - 1));
 }
 
