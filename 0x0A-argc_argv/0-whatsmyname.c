@@ -2,7 +2,7 @@
 #include <stdio.h>
 /**
 * main - where the magic happends
-* @argc - a function that prints the name of the prog
+* @argc: a function that prints the name of the prog
 * @argv: operant
 * Return: 0 if succesful
 */
