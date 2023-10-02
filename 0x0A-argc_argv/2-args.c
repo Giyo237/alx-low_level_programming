@@ -6,7 +6,7 @@
 * @argc: argument counter
 * Return: 0 if succesful
 */
-int main (int argc, char *argv[])
+int main(int argc, char *argv[])
 {
 	int i, j = 0;
 
