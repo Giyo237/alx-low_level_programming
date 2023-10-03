@@ -20,16 +20,30 @@ char *str_concat(char *s1, char *s2)
 	{
 		s2 = "";
 	}
-	len1 = strlen(s1);
-	len2 = strlen(s2);
+	len1 = len2 = 0;
+	while (s1[len1] != '\0')
+		len1++;
+	while (s2[len2] != '\0')
+		len2++;
 	conc_str = (char *) malloc((len1 + len2 + 1) * sizeof(char));
 
 	if (conc_str == NULL)
 	{
 		return (NULL);
 	}
-	strcpy(conc_str, s1);
-	strcat(conc_str, s2);
+	len1 = len2 = 0;
+	while (s1[len1] != '\0')
+	{
+		conc_str[len1] = s1[len1];
+		len1++;
+	}
+
+	while (s2[len2] != '\0')
+	{
+		conc_str[len1] = s2[len2];
+		len1++, len2++;
+	}
+	conc_str[len1] = '\0';
 	return (conc_str);
 }
 

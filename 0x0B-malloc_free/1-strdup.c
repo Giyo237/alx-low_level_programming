@@ -9,17 +9,24 @@
 char *_strdup(char *str)
 {
 	char *dup_prt;
+	int i, t;
 
 	if (str == NULL)
 	{
 		return (NULL);
 	}
+	i = 0;
+	while(str[i] != '\0')
+		i++;
+
 	dup_prt = (char *) malloc((strlen(str) + 1) * sizeof(char));
 
 	if (dup_prt == NULL)
 	{
 		return (NULL);
 	}
-	strcpy(dup_prt, str);
+	for (t = 0; str[t]; t++)
+		dup_prt[t] = str[t];
+
 	return (dup_prt);
 }
