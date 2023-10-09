@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
+
 /**
  * _is_digit - a function that checks for digits
  * @c: checker
@@ -9,6 +9,21 @@
 int _is_digit(char c)
 {
 	return (c >= '0' && c <= '9');
+}
+/**
+* _strlen - returns the string length
+*@s: string to evaluate
+*Return: the lenghth
+*/
+int _strlen(char *s)
+{
+	int i = 0;
+
+	while (s[i] != '\0')
+	{
+		i++;
+	}
+	return (i);
 }
 /**
 * validate - validation function
@@ -47,8 +62,8 @@ int multi(char *num1, char *num2)
 	int i, j, l1, l2, carry, sum;
 	int *result;
 
-	l1 = strlen(num1);
-	l2 = strlen(num2);
+	l1 = _strlen(num1);
+	l2 = _strlen(num2);
 	result = malloc(sizeof(int) * (l1 + l2));
 	for (i = 0; i < l1 + l2; i++)
 	{
@@ -92,7 +107,6 @@ int main(int argc, char *argv[])
 	{
 		printf("Error\n");
 		exit(98);
-		return (98);
 	}
 	num1 = argv[1];
 	num2 = argv[2];
