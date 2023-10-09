@@ -32,12 +32,13 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 	{
 		return (NULL);
 	}
+	 p = ptr, q = nptr;
 	if (new_size < old_size)
 	{
-		old_size = new_size;
+		for (i = 0; i < new_size;i++)
+			q[i] = p[i];
 	}
 
-	p = ptr, q = nptr;
 	for (i = 0; i < old_size; i++)
 	{
 		q[i] = p[i];
