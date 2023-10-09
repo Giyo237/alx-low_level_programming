@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 /**
  * _is_digit - a function that checks for digits
  * @c: checker
@@ -10,46 +11,45 @@ int _is_digit(char c)
 	return (c >= '0' && c <= '9');
 }
 /**
-* main - main function
-* @argc: argument counter
-* @argv: argument vector
+* validate - validation function
+* @num1: argument counter
+* @num2: argument vector
 * Return: 0
 */
-int main(int argc, char *argv[])
+int validate(char *num1, char *num2)
 {
-	int i, j = 0, l1, l2;
-	char *num1, *num2;
-	int carry, sum, *result;
+	int i, j = 0;
 
-	if (argc != 3)
-	{
-		printf("Error\n");
-		return (98);
-	}
-	num1 = argv[1], num2 = argv[2];
-	for (i = 0; num1[i]  != '\0'; i++)
+	for (i = 0; num1[i] != '\0'; i++)
 	{
 		if (!_is_digit(num1[i]))
 		{
-			printf("Error\n");
 			return (98);
 		}
 	}
-	for (j = 0 ; num2[j] != '\0'; j++)
+	for (j = 0; num2[j] != '\0'; j++)
 	{
 		if (!_is_digit(num2[j]))
 		{
-			printf("Error\n");
 			return (98);
 		}
 	}
-	l1 = i, l2 = j;
+	return (0);
+}
+/**
+ * multi - this function multiplies num1 and num2 if they are valid
+ * @num1: first operant
+ * @num2: second operant
+ * Return: 0
+ */
+int multi(char *num1, char *num2)
+{
+	int i, j, l1, l2, carry, sum;
+	int *result;
+
+	l1 = strlen(num1);
+	l2 = strlen(num2);
 	result = malloc(sizeof(int) * (l1 + l2));
-	if (result == NULL)
-	{
-		printf("Error\n");
-		return (98);
-	}
 	for (i = 0; i < l1 + l2; i++)
 	{
 		result[i] = 0;
@@ -60,21 +60,46 @@ int main(int argc, char *argv[])
 		for (j = l2 - 1; j >= 0; j--)
 		{
 			sum = (num1[i] - '0') * (num2[j] - '0') + result[i + j + 1] + carry;
-		carry = sum / 10;
-		result[i + j + 1] = sum % 10;
+			carry = sum / 10;
+			result[i + j + 1] = sum % 10;
 		}
 		result[i + j + 1] += carry;
 	}
-		i = 0;
-		while (i < l1 + l2 - 1 && result[i] == 0)
-		{
-			i++;
-		}
-		for (; i < l1 + l2; i++)
-		{
-			printf("%d", result[i]);
-		}
-		printf("\n");
-		free(result);
-		return (0);
+	i = 0;
+	while (i < l1 + l2 - 1 && result[i] == 0)
+	{
+		i++;
+	}
+	for (; i < l1 + l2; i++)
+	{
+		printf("%d", result[i]);
+	}
+	printf("\n");
+	free(result);
+	return (0);
+}
+/**
+ * main - main function
+ * @argc: argument counter
+ * @argv: argument vector
+ * Return: 0
+ */
+int main(int argc, char *argv[])
+{
+	char *num1, *num2;
+
+	if (argc != 3)
+	{
+		printf("Error\n");
+		return (98);
+	}
+	num1 = argv[1];
+	num2 = argv[2];
+	if (validate(num1, num2) != 0)
+	{
+		printf("Error\n");
+		return (98);
+	}
+	multi(num1, num2);
+	return (98);
 }
