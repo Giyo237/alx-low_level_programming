@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-
 /**
  * _is_digit - a function that checks for digits
  * @c: checker
@@ -25,17 +24,15 @@ int main(int argc, char *argv[])
 	if (argc != 3)
 	{
 		printf("Error\n");
-		return(98);
+		return (98);
 	}
-	num1 = argv[1];
-	num2 = argv[2];
-
+	num1 = argv[1], num2 = argv[2];
 	for (i = 0; num1[i]  != '\0'; i++)
 	{
 		if (!_is_digit(num1[i]))
 		{
 			printf("Error\n");
-			return(98);
+			return (98);
 		}
 	}
 	for (j = 0 ; num2[j] != '\0'; j++)
@@ -46,17 +43,14 @@ int main(int argc, char *argv[])
 			return (98);
 		}
 	}
-	l1 = i;
-	l2 = j;
-
+	l1 = i, l2 = j;
 	result = malloc(sizeof(int) * (l1 + l2));
-
 	if (result == NULL)
 	{
 		printf("Error\n");
 		return (98);
 	}
-	for(i = 0; i < l1 + l2; i++)
+	for (i = 0; i < l1 + l2; i++)
 	{
 		result[i] = 0;
 	}
@@ -65,7 +59,7 @@ int main(int argc, char *argv[])
 		carry = 0;
 		for (j = l2 - 1; j >= 0; j--)
 		{
-			sum = (num1[i] - '0') * (num2[j] - '0') + result[i +j + 1] + carry;
+			sum = (num1[i] - '0') * (num2[j] - '0') + result[i + j + 1] + carry;
 		carry = sum / 10;
 		result[i + j + 1] = sum % 10;
 		}
@@ -76,12 +70,11 @@ int main(int argc, char *argv[])
 		{
 			i++;
 		}
-		for(; i < l1 + l2; i++)
+		for (; i < l1 + l2; i++)
 		{
-			printf("%d" , result[i]);
+			printf("%d", result[i]);
 		}
 		printf("\n");
-
 		free(result);
-		return(0);
+		return (0);
 }
