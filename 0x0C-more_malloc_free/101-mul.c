@@ -101,5 +101,6 @@ int main(int argc, char *argv[])
 		return (98);
 	}
 	multi(num1, num2);
+	printf("\n");
 	return (98);
 }
