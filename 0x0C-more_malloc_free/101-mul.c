@@ -32,7 +32,7 @@ int validate(char *num1, char *num2)
 	{
 		if (!_is_digit(num2[j]))
 		{
-			exit(98)
+			exit(98);
 			return (98);
 		}
 	}
@@ -74,7 +74,7 @@ int multi(char *num1, char *num2)
 	}
 	for (; i < l1 + l2; i++)
 	{
-		printf("%d\n", result[i]);
+		printf("%d", result[i]);
 	}
 	printf("\n");
 	free(result);
@@ -106,6 +106,6 @@ int main(int argc, char *argv[])
 	}
 	multi(num1, num2);
 	printf("\n");
-	exit(98)
+	exit(98);
 	return (98);
 }
