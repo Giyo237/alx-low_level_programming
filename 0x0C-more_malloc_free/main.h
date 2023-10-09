@@ -12,7 +12,7 @@ void *_calloc(unsigned int nmemb, unsigned int size);
 int *array_range(int min, int max);
 int _putchar(char c);
 int _strlen(char *s);
-int _is_digit(char c);
+int is_digit(char *c);
 int validate(char *num1, char *num2);
 
 #endif

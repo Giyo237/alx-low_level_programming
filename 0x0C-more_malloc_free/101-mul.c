@@ -1,121 +1,43 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <ctype.h>
 
-/**
- * _is_digit - a function that checks for digits
- * @c: checker
- * Return: if c is digit
- */
-int _is_digit(char c)
-{
-	return (c >= '0' && c <= '9');
+int isPositiveNumber(char *str) {
+    while (*str) {
+        if (!isdigit(*str)) {
+            return (0);
+        }
+        str++;
+    }
+    return (1);
 }
-/**
-* _strlen - returns the string length
-*@s: string to evaluate
-*Return: the lenghth
-*/
-int _strlen(char *s)
-{
-	int i = 0;
 
-	while (s[i] != '\0')
-	{
-		i++;
-	}
-	return (i);
+int multiplyNumbers(int num1, int num2) {
+    return (num1 * num2);
 }
-/**
-* validate - validation function
-* @num1: argument counter
-* @num2: argument vector
-* Return: 0
-*/
-int validate(char *num1, char *num2)
-{
-	int i, j = 0;
 
-	for (i = 0; num1[i] != '\0'; i++)
-	{
-		if (!_is_digit(num1[i]))
-		{
-			exit(98);
-		}
-	}
-	for (j = 0; num2[j] != '\0'; j++)
-	{
-		if (!_is_digit(num2[j]))
-		{
-			exit(98);
-		}
-	}
-	return (0);
-}
-/**
- * multi - this function multiplies num1 and num2 if they are valid
- * @num1: first operant
- * @num2: second operant
- * Return: 0
- */
-int multi(char *num1, char *num2)
-{
-	int i, j, l1, l2, carry, sum;
-	int *result;
+int main(int argc, char *argv[]) {
+    int num1, num2, result;
+    char *num1Str, *num2Str;
 
-	l1 = _strlen(num1);
-	l2 = _strlen(num2);
-	result = malloc(sizeof(int) * (l1 + l2));
-	for (i = 0; i < l1 + l2; i++)
-	{
-		result[i] = 0;
-	}
-	for (i = l1 - 1; i >= 0; i--)
-	{
-		carry = 0;
-		for (j = l2 - 1; j >= 0; j--)
-		{
-			sum = (num1[i] - '0') * (num2[j] - '0') + result[i + j + 1] + carry;
-			carry = sum / 10;
-			result[i + j + 1] = sum % 10;
-		}
-		result[i + j + 1] += carry;
-	}
-	i = 0;
-	while (i < l1 + l2 - 1 && result[i] == 0)
-	{
-		i++;
-	}
-	for (; i < l1 + l2; i++)
-	{
-		printf("%d", result[i]);
-	}
-	printf("\n");
-	free(result);
-	return (0);
-}
-/**
- * main - main function
- * @argc: argument counter
- * @argv: argument vector
- * Return: 0
- */
-int main(int argc, char *argv[])
-{
-	char *num1, *num2;
+	if (argc != 3) {
+        printf("Error\n");
+        exit(98);
+    }
 
-	if (argc != 3)
-	{
-		printf("Error\n");
-		exit(98);
-	}
-	num1 = argv[1];
-	num2 = argv[2];
-	if (validate(num1, num2) != 0)
-	{
-		printf("Error\n");
-		exit(98);
-	}
-	multi(num1, num2);
-	printf("\n");
-	return (0);
+     num1Str = argv[1];
+     num2Str = argv[2];
+
+    if (!isPositiveNumber(num1Str) || !isPositiveNumber(num2Str))
+    {
+	    printf("Error\n");
+	exit(98);
+    }
+    num1 = atoi(num1Str);
+    num2 = atoi(num2Str);
+
+    result = multiplyNumbers(num1, num2);
+
+    printf("%d\n", result);
+    return 0;
 }
