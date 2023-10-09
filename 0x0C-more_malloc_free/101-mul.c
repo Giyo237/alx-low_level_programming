@@ -72,7 +72,7 @@ int multi(char *num1, char *num2)
 	}
 	for (; i < l1 + l2; i++)
 	{
-		printf("%d", result[i]);
+		printf("%d\n", result[i]);
 	}
 	printf("\n");
 	free(result);
