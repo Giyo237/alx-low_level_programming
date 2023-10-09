@@ -5,12 +5,12 @@
  * @s1: stringto be copied
  * @s2: pasted here
  * Return: prt
+ * @n: checcker
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *r;
-	unsigned int l1 = 0, l2 = 0;
-	unsigned int i = 0;
+	unsigned int l1 = 0, l2 = 0, i = 0;
 
 	if (s1 == NULL)
 	{
