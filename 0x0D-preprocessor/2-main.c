@@ -1,0 +1,31 @@
+#include <stdio.h>
+#include <unistd.h>
+#define FILENAME "2-main.c"
+
+/**
+ * _putchar - writes the character c to stdout
+ * @c: The character to print
+ *
+ * Return: On success 1.
+ * On error, -1 is returned, and errno is set appropriately.
+ */
+int _putchar(char c)
+{
+	return (write(1, &c, 1));
+}
+/**
+*main - a function that pronts the name of the file it was compiles from
+* Return: 0 if succeful
+*/
+int main(void)
+{
+	const char *file = FILENAME;
+
+	while (*file != '\0')
+	{
+		_putchar(*file);
+	file++;
+	}
+	putchar('\n');
+	return (0);
+}
