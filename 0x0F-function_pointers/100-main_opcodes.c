@@ -9,6 +9,7 @@
 int main(int argc, char *argv[])
 {
 	int bytes, i;
+	char *arr;
 
 	if (argc != 2)
 	{
@@ -16,7 +17,9 @@ int main(int argc, char *argv[])
 		exit(1);
 	}
 
+
 	bytes = atoi(argv[1]);
+
 
 	if (bytes < 0)
 	{
@@ -24,14 +27,16 @@ int main(int argc, char *argv[])
 		exit(2);
 	}
 
-	char *arr = (char *)main;
+
+	arr = (char *)main;
+
 
 	for (i = 0; i < bytes; i++)
 	{
 		if (i == bytes - 1)
 		{
-		printf("%02hhx\n ", arr[i]);
-		break;
+			printf("%02hhx\n ", arr[i]);
+			break;
 		}
 		printf("%02hhx ", arr[i]);
 	}
