@@ -8,37 +8,28 @@
 */
 int main(int argc, char *argv[])
 {
-	int bytes, i;
-	char *arr;
+	int b, i;
 
 	if (argc != 2)
 	{
 		printf("Error\n");
-		exit(1);
+		return (1);
 	}
+	b = atoi(argv[1]);
 
-
-	bytes = atoi(argv[1]);
-
-
-	if (bytes < 0)
+	if(b < 0)
 	{
 		printf("Error\n");
 		exit(2);
 	}
 
-
-	arr = (char *)main;
-
-
-	for (i = 0; i < bytes; i++)
+	for (i = 0; i < b; i++)
 	{
-		if (i == bytes - 1)
-		{
-			printf("%02hhx\n ", arr[i]);
-			break;
-		}
-		printf("%02hhx ", arr[i]);
+		printf("%02hhx", *((char *)main + i));
+		if (i < b - 1)
+			printf(" ");
+		else
+			printf("\n");
 	}
 	return (0);
 }
