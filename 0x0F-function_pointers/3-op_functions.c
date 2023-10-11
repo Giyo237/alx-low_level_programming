@@ -31,7 +31,7 @@ int op_sub(int a, int b)
  *
  * @a: The first integer
  * @b: The second int
- * Return: product 
+ * Return: product
  */
 int op_mul(int a, int b)
 {
