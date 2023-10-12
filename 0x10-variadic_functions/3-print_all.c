@@ -13,6 +13,10 @@ void print_all(const char * const format, ...)
 	int i = 0;
 
 	va_start(args, format);
+	if (format)
+	{
+		while (format[i])
+		{
 	while (format != NULL && format[i] != '\0')
 	{
 		switch (format[i])
@@ -45,6 +49,8 @@ void print_all(const char * const format, ...)
 		}
 				separator = ", ";
 				i++;
+	}
+		}
 	}
 		va_end(args);
 		printf("\n");
