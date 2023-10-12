@@ -28,15 +28,15 @@ void print_all(const char * const format, ...)
 				break;
 			case 's':
 				{
-					char *s = va_arg(args, char *);
+					char *str = va_arg(args, char *);
 
-					if (s == NULL)
+					if (str == NULL)
 					{
 						printf("%s(nil)", separator);
 					}
 					else
 						{
-							printf("%s%s", separator, s);
+							printf("%s%s", separator, str);
 						}
 					}
 					break;
