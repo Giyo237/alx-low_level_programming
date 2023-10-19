@@ -1,10 +1,10 @@
 #include "lists.h"
- 
+
 /**
  * print_list - function that prints all elements of a list_t
  *
  * @h: The pointer to the head of lis_t
- * 
+ *
  * Return: number of nodes in the list
  */
 size_t print_list(const list_t *h)
@@ -24,7 +24,7 @@ size_t print_list(const list_t *h)
 			while (t > 0)
 			{
 				d++;
-				t /= (100/10);
+				t /= (100 / 10);
 			}
 			while (d--)
 			{
