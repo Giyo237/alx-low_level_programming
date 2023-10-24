@@ -13,15 +13,15 @@ void free_listint2(listint_t **head)
 	listint_t *now;
 
 
-	if (head == NULL || *head == NULL)
+	if (head == NULL)
 	{
-		printf("(nil)\n");
+		return;
 	}
-	while (head != NULL)
+	while (*head)
 	{
-		now = *head;
-		*head = (*head)->next;
-		free((void *)now);
+		now = (*head)->next;
+		free(*head);
+		*head = now;
 	}
 	*head = NULL;
 }
