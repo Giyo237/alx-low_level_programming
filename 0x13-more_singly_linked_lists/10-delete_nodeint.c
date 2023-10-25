@@ -7,6 +7,7 @@
  * @head: The the pointr to the pntr of the first element of
  *the list
  * Return:1 || -1
+ *@index:index to chaeck and delete
  */
 int delete_nodeint_at_index(listint_t **head, unsigned int index)
 {
