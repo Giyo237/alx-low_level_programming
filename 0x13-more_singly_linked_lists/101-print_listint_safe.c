@@ -1,4 +1,5 @@
-include "lists.h"
+#include "lists.h"
+#include <stdlib.h>
 #include <stdio.h>
 size_t looped_listint_len(const listint_t *head);
 size_t print_listint_safe(const listint_t *head);
@@ -25,24 +26,24 @@ size_t looped_listint_len(const listint_t *head)
 	{
 		if (t == h)
 		{
-			tortoise = head;
-			while (tortoise != hare)
+			t = head;
+			while (t != h)
 			{
 				nodes++;
-				tortoise = tortoise->next;
-				hare = hare->next;
+				t = t->next;
+				h = h->next;
 			}
-			tortoise = tortoise->next;
+			t = t->next;
 
-			while (tortoise != hare)
+			while (t != h)
 			{
 				nodes++;
-				tortoise = tortoise->next;
+				t = t->next;
 			}
 			return (nodes);
 		}
-		tortoise = tortoise->next;
-		hare = (hare->next)->next;
+		t = t->next;
+		h = (h->next)->next;
 	}
 	return (0);
 }
