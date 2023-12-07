@@ -2,7 +2,7 @@
 #include <stdlib.h>
 /**
  *add_dnodeint - function that adds a node
- *@h:the pointer to the pointer of the first elemt on the linked list
+ *@head:the pointer to the pointer of the first elemt on the linked list
  *@n: value to be assigned
  *Return: new node
  */
